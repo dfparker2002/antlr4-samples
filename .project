@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>antlr4-tour2</name>
-	<comment></comment>
+	<name>antlr4-samples</name>
+	<comment>samples from The Definitive ANTLR 4 Reference</comment>
 	<projects>
 	</projects>
 	<buildSpec>
