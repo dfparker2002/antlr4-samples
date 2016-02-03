@@ -9,7 +9,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tour2</artifactId>
+	<artifactId>tour4</artifactId>
 	
 	
 	<build>
@@ -17,7 +17,7 @@
 			<resource>
 				<directory>${basedir}/src/main/data</directory>
 				<includes>
-					<include>t.rows</include>
+					<include>Demo.java</include>
 				</includes>
 			</resource>
 		</resources>
@@ -28,8 +28,8 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<configuration>
-					<mainClass>Col</mainClass>
-					<!-- arguments> <argument>2</argument> </arguments> -->
+					<mainClass>ExtractInterfaceTool</mainClass>
+					<arguments> <argument>"Demo.java"</argument> </arguments>
 				</configuration>
 			</plugin>
     	</plugins>

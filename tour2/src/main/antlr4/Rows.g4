@@ -1,8 +1,9 @@
 grammar Rows;
-
+/*
 @header {
 package tour2;
 }
+*/
 
 @parser::members { // add members to generated RowsParser
     int col;
