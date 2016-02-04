@@ -2,34 +2,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>atlr4-samples</groupId>
 		<artifactId>atlr4-samples</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tour4</artifactId>
-	
-	
+	<artifactId>lexmagic</artifactId>
+
 	<build>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/data</directory>
 				<includes>
-					<include>t.rows</include>
+					<include>array.data</include>
 				</includes>
 			</resource>
 		</resources>
-		
-    	<plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<configuration>
-					<mainClass>ExtractInterfaceTool</mainClass>
-					<!-- arguments> <argument>2</argument> </arguments> -->
+					<mainClass>org.antlr.v4.runtime.misc.TestRig</mainClass>
+					<arguments>
+					  <argument>XML</argument>
+					  <argument>document</argument>
+					  <argument>-ps</argument>
+					  <argument>/tmp/t.ps</argument>
+					  <argument>src/main/data/cat.xml</argument>
+				    </arguments>
 				</configuration>
 			</plugin>
     	</plugins>
